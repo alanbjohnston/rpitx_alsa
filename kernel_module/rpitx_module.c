@@ -12,6 +12,7 @@
 #include <linux/moduleparam.h>
 #include <linux/platform_device.h>
 #include <linux/fs.h>
+#include <sound/pcm.h>
 
 #include "alsa_handling.h"
 #include "sysfs_variable.h"
