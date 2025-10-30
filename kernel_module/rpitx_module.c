@@ -13,7 +13,7 @@
 #include <linux/platform_device.h>
 #include <linux/fs.h>
 #include <sound/pcm.h>
-#include <sound/memalloc.h>
+//#include <sound/memalloc.h>
 
 #include "alsa_handling.h"
 #include "sysfs_variable.h"
