@@ -13,7 +13,7 @@
 #include <sound/core.h>
 #include <sound/pcm.h>
 #include <sound/initval.h>
-#include <sound/memalloc.h>
+//#include <sound/memalloc.h>
 
 #include "alsa_handling.h"
 #include "iq_sample_generation.h"
