@@ -12,7 +12,7 @@ First, I assume you have already tried the "regular" rpitx and everything has be
 
 Then, you need to clone this repository. Since it depends on the F5OEO's "librpitx" repository, you need to run:
 ```
-$ git clone --recursive https://github.com/felixzero/rpitx_alsa.git
+git clone --recursive https://github.com/alanbjohnston/rpitx_alsa.git
 ```
 
 Then you need to build the kernel module (the ALSA driver). You need the kernel headers and of course, gcc. But you need to make sure your system is up-to-date first, otherwise the build will fail. Run:
@@ -23,24 +23,24 @@ sudo apt upgrade
 And reboot if any significant update was done. Then, run:
 
 ```
-$ sudo apt install raspberrypi-kernel-headers
+sudo apt install raspberrypi-kernel-headers
 ```
 
 Then:
 
 ```
-$ cd rpitx_alsa/
-$ cd kernel_module/
-$ make
+cd rpitx_alsa/
+cd kernel_module/
+make
 ```
 
 If there are no error, you can now compile librpitx and the daemon:
 
 ```
-$ cd ../daemon/librpitx/src/
-$ make
-$ cd ../..
-$ make
+cd ../daemon/librpitx/src/
+make
+cd ../..
+make
 ```
 If there are no errors, you are done!
 
@@ -49,13 +49,13 @@ If there are no errors, you are done!
 To be able to use the transmitter, you must first load the kernel module. In the `kernel_module` folder, just run:
 
 ```
-$ sudo insmod snd-rpitx.ko
+sudo insmod snd-rpitx.ko
 ```
 
 Then, go up one folder (`$ cd ..`), and run the daemon in background, still as root:
 
 ```
-$ sudo ./rpitxd &
+sudo ./rpitxd &
 ```
 
 Now, you are all set, you can configure your favorite amateur radio software (Quisk, fldigi, WSJT-X, QSSB...) to send data to one of the following sound devices:
@@ -65,7 +65,7 @@ Now, you are all set, you can configure your favorite amateur radio software (Qu
 You can also dynamically tune the frequency and harmonics of rpitx by writing to:
 
 ```
-$ sudo su -c "echo 14070000 > /sys/devices/rpitx/frequency"
-$ sudo su -c "echo 1 > /sys/devices/rpitx/harmonic"
+sudo su -c "echo 14070000 > /sys/devices/rpitx/frequency"
+sudo su -c "echo 1 > /sys/devices/rpitx/harmonic"
 ```
 Have fun!
