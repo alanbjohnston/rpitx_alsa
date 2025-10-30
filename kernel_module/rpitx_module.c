@@ -23,7 +23,7 @@
 MODULE_AUTHOR("Kevin Guilloy");
 MODULE_DESCRIPTION("ALSA module for rpitx");
 MODULE_LICENSE("GPL");
-MODULE_SUPPORTED_DEVICE("{{ALSA,raspberrypi}}");
+// MODULE_SUPPORTED_DEVICE("{{ALSA,raspberrypi}}");
 
 static int major_number;
 static struct class *chardev_class = NULL;
