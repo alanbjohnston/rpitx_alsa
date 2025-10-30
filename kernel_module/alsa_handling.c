@@ -18,6 +18,8 @@
 #include "alsa_handling.h"
 #include "iq_sample_generation.h"
 
+#define 	snd_dma_continuous_data(x)   ((struct device *)(unsigned long)(x))
+
 /* Basic configuration */
 #define SND_RPITX_DRIVER "snd_rpitx"
 
