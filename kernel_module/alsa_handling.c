@@ -14,11 +14,12 @@
 #include <sound/pcm.h>
 #include <sound/initval.h>
 //#include <sound/memalloc.h>
+#include <memalloc.h>
 
 #include "alsa_handling.h"
 #include "iq_sample_generation.h"
 
-#define 	snd_dma_continuous_data(x)   ((struct device *)(unsigned long)(x))
+///#define 	snd_dma_continuous_data(x)   ((struct device *)(unsigned long)(x))
 
 /* Basic configuration */
 #define SND_RPITX_DRIVER "snd_rpitx"
